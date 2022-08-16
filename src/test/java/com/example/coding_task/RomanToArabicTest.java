@@ -11,6 +11,14 @@ import java.util.stream.Stream;
 
 class RomanToArabicTest
 {
+	static Stream<Map<String, Integer>> input() {
+		return Stream.of(
+			Collections.singletonMap("III", 3),
+			Collections.singletonMap("LVIII", 58),
+			Collections.singletonMap("MCMXCIV", 1994)
+		);
+	}
+
 	@ParameterizedTest
 	@MethodSource("input")
 	void test(Map<String, Integer> input)
@@ -47,13 +55,5 @@ class RomanToArabicTest
 		}
 
 		return result;
-	}
-
-	static Stream<Map<String, Integer>> input() {
-		return Stream.of(
-			Collections.singletonMap("III", 3),
-			Collections.singletonMap("LVIII", 58),
-			Collections.singletonMap("MCMXCIV", 1994)
-		);
 	}
 }
