@@ -1,0 +1,65 @@
+.DS_Store
+####
+**/node_modules/
+
+### Java ###
+
+/*/bin/
+/*/*/bin/*
+/*/test-bin/
+/*/bin-test/
+*.log
+*.class
+**/test-reports/
+**/test-it-reports/
+**/*.local.properties
+**/*.local.yaml
+*.patch
+
+# Package Files #
+*.war
+*.ear
+
+### ERIB ###
+java*.bat
+app
+
+### Gradle ###
+
+.gradle
+**/build/
+!**/src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Cache of project
+.gradletasknamecache
+
+### Sonar ###
+
+#Sonar generated dir
+/.sonar/
+
+### Intellij ###
+.shelf/
+.ideaDataSources/
+.idea/
+**/out/*
+*.iml
+*.iws
+*.ipr
+*.ids
+*/out/*
+
+# Ignore the Eclipse project files and folders
+.classpath
+.project
+.settings
+
+# Ignore the NetBeans project files and folders
+.nb-gradle
+.nb-gradle-properties
+
+# bash shell
+*.sh
