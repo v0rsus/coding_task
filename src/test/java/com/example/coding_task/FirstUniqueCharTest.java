@@ -1,15 +1,11 @@
 package com.example.coding_task;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-class FirstUniqueCharTest
+class FirstUniqueCharTest extends BaseStrInIntOutTest
 {
 	static Stream<Map<String, Integer>> input() {
 		return Stream.of(
@@ -20,14 +16,8 @@ class FirstUniqueCharTest
 		);
 	}
 
-	@ParameterizedTest
-	@MethodSource("input")
-	void test(Map<String, Integer> input)
-	{
-		input.forEach((k, v) -> Assertions.assertEquals(v, firstUniqChar(k)));
-	}
-
-	public int firstUniqChar(String s)
+	@Override
+	protected int testImpl(String s)
 	{
 		Map<Character, Integer> cnt = new HashMap<>();
 		for(int i=0;i<s.length();i++)
