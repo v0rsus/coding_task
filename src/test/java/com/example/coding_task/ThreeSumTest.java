@@ -25,7 +25,7 @@ class ThreeSumTest
         input.forEach((k, v) -> Assertions.assertEquals(v, testImpl(k)));
     }
 
-    protected List<List<Integer>> testImpl(int[] nums)
+    private List<List<Integer>> testImpl(int[] nums)
     {
         //Need to find List<{x, y, z}>
         Map<Integer, List<Integer>> result = new HashMap<>();

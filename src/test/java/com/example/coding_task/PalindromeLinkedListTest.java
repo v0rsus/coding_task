@@ -34,7 +34,7 @@ class PalindromeLinkedListTest
         input.forEach((k, v) -> Assertions.assertEquals(v, testImpl(k)));
     }
 
-    protected boolean testImpl(ListNode head)
+    private boolean testImpl(ListNode head)
     {
         List<Integer> headAsList = new ArrayList<>();
         while (head != null)

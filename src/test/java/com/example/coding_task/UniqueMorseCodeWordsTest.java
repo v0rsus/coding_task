@@ -23,7 +23,7 @@ class UniqueMorseCodeWordsTest
 		input.forEach((k, v) -> Assertions.assertEquals(v, testImpl(k)));
 	}
 
-	protected int testImpl(List<String> words)
+	private int testImpl(List<String> words)
 	{
 		Map<Character, String> morseAlphabet = new HashMap<>();
 		morseAlphabet.put('a', ".-");
