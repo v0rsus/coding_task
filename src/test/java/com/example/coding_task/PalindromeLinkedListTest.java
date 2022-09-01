@@ -17,12 +17,15 @@ class PalindromeLinkedListTest
         );
     }
 
-    private static ListNode convert(int[] input)
+    private static ListNode convert(int[] ints)
     {
-        ListNode result = new ListNode(input[input.length - 1]);
-        for(int i=input.length-2;i>=0;i--)
+        int i = ints.length -1;
+        ListNode result = new ListNode(ints[i]);
+        --i;
+        while (i>=0)
         {
-            result = new ListNode(input[i], result);
+            result = new ListNode(ints[i], result);
+            i--;
         }
         return result;
     }
